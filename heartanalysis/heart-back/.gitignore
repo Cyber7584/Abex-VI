@@ -1,0 +1,27 @@
+# VS Code files folder
+.vscode/
+
+.idea/
+
+# Dependency directories
+node_modules/
+
+# Docker's database files
+tmp/db/
+*.env
+.env
+.env.copy
+
+# macOS files
+.DS_Store
+
+# Another files
+hide-files.json
+
+# Compiled output
+dist
+
+# Tests
+coverage
+tmp
+node_modules

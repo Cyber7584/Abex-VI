@@ -1,0 +1,60 @@
+version: "3"
+services:
+    api:
+        image: apibase
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 120s
+        build: .
+        depends_on:
+            - redis
+        links:
+            - redis
+        restart: "always"
+        command: bash -c "npm run dev"
+        tty: true
+        ports:
+            - "${API_PORT:-8080}:8080"
+            - "9229:9229"
+        logging:
+            options:
+                max-size: "512m"
+                max-file: "10"
+        volumes:
+            - ./:/usr/src/app
+            - api-heart-back-node-modules:/usr/src/app/node_modules
+        environment:
+            - REDIS_URL=redis://cache
+        user: "node:node"
+
+    redis:
+        image: redis
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.21"
+                    memory: 256M
+                reservations:
+                    cpus: "0.10"
+                    memory: 160M
+        restart: "always"
+        logging:
+            options:
+                max-size: "512m"
+                max-file: "10"
+
+    db_dev:
+        image: postgis/postgis:12-master
+        ports:
+            - "${DEBUG_DB_PORT:-5432}:5432"
+        environment:
+            POSTGRES_PASSWORD: toor
+        volumes:
+            - db-dev-data:/var/lib/postgresql/data
+
+volumes:
+    api-heart-back-node-modules:
+    db-dev-data:

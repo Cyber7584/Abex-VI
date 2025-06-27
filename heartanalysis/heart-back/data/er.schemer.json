@@ -1,0 +1,845 @@
+{
+    "tables": [
+        {
+            "id": 2898107043,
+            "name": "cupom",
+            "position": {
+                "x": 62.404887358644146,
+                "y": -181.8439961383709
+            },
+            "columns": [
+                {
+                    "id": 6649872495,
+                    "name": "id",
+                    "type": "int",
+                    "is_auto_increment": true,
+                    "is_primary_key": true,
+                    "is_not_null": true,
+                    "is_unique": false
+                },
+                {
+                    "id": 8623352486,
+                    "name": "validade",
+                    "type": "date",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 8258697377,
+                    "name": "status",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 7829358601,
+                    "name": "id_aluno",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 9310624493,
+                    "name": "id_professor",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                }
+            ],
+            "constraints": [
+                {
+                    "id": 4914065325,
+                    "type": 0,
+                    "target_table_id": "8611770443",
+                    "relationships": [
+                        {
+                            "id": 5680345263,
+                            "own_column_id": "7829358601",
+                            "target_column_id": "2192588009"
+                        }
+                    ]
+                },
+                {
+                    "id": 5466374308,
+                    "type": 0,
+                    "target_table_id": "4815597482",
+                    "relationships": [
+                        {
+                            "id": 7177548290,
+                            "own_column_id": "9310624493",
+                            "target_column_id": "1224261813"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2090554475,
+            "name": "dieta",
+            "position": {
+                "x": 938.740563032065,
+                "y": -161.46204534016795
+            },
+            "columns": [
+                {
+                    "id": 2600348391,
+                    "name": "id",
+                    "type": "int",
+                    "is_auto_increment": true,
+                    "is_primary_key": true,
+                    "is_not_null": true,
+                    "is_unique": false
+                },
+                {
+                    "id": 4199361510,
+                    "name": "id_aluno",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 5715487101,
+                    "name": "alimento",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 3735070660,
+                    "name": "peso",
+                    "type": "float",
+                    "is_primary_key": false,
+                    "is_not_null": false,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                }
+            ],
+            "constraints": [
+                {
+                    "id": 9712681201,
+                    "type": 0,
+                    "target_table_id": "8611770443",
+                    "relationships": [
+                        {
+                            "id": 6666330252,
+                            "own_column_id": "4199361510",
+                            "target_column_id": "2192588009"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1719375861,
+            "name": "treino",
+            "position": {
+                "x": 1221.048843529178,
+                "y": 173.77624678853735
+            },
+            "columns": [
+                {
+                    "id": 2396263890,
+                    "name": "id",
+                    "type": "int",
+                    "is_auto_increment": true,
+                    "is_primary_key": true,
+                    "is_not_null": true,
+                    "is_unique": false
+                },
+                {
+                    "id": 5992568096,
+                    "name": "nome",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 3089629192,
+                    "name": "serie",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 5472634805,
+                    "name": "repeticao",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 8971718331,
+                    "name": "dia",
+                    "type": "date",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 8544262361,
+                    "name": "id_aluno",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                }
+            ],
+            "constraints": [
+                {
+                    "id": 3788334599,
+                    "type": 0,
+                    "target_table_id": "8611770443",
+                    "relationships": [
+                        {
+                            "id": 7774965267,
+                            "own_column_id": "8544262361",
+                            "target_column_id": "2192588009"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 8376306265,
+            "name": "cidade",
+            "position": {
+                "x": 1075.181046394162,
+                "y": 764.0266116326588
+            },
+            "columns": [
+                {
+                    "id": 9124930246,
+                    "name": "id",
+                    "type": "int",
+                    "is_auto_increment": true,
+                    "is_primary_key": true,
+                    "is_not_null": false,
+                    "is_unique": false
+                },
+                {
+                    "id": 2339369725,
+                    "name": "nome",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 3191771032,
+                    "name": "id_estado",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                }
+            ],
+            "constraints": [
+                {
+                    "id": 8693876373,
+                    "type": 0,
+                    "relationships": [
+                        {
+                            "id": 1830467646,
+                            "own_column_id": 3191771032,
+                            "target_column_id": 9251363319
+                        }
+                    ],
+                    "target_table_id": 3801911794
+                }
+            ]
+        },
+        {
+            "id": 3801911794,
+            "name": "estado",
+            "position": {
+                "x": 1420.3792410896617,
+                "y": 694.8658380128884
+            },
+            "columns": [
+                {
+                    "id": 9251363319,
+                    "name": "id",
+                    "type": "int",
+                    "is_auto_increment": true,
+                    "is_primary_key": true,
+                    "is_not_null": true,
+                    "is_unique": false
+                },
+                {
+                    "id": 1381961248,
+                    "name": "nome",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 9553282879,
+                    "name": "sigla",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                }
+            ],
+            "constraints": []
+        },
+        {
+            "id": 4815597482,
+            "name": "professor",
+            "position": {
+                "x": -77.5654907306043,
+                "y": 835.3121131488643
+            },
+            "columns": [
+                {
+                    "id": 1224261813,
+                    "name": "id",
+                    "type": "int",
+                    "is_auto_increment": true,
+                    "is_primary_key": true,
+                    "is_not_null": false,
+                    "is_unique": false
+                },
+                {
+                    "id": 4742452698,
+                    "name": "nome",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 2164427579,
+                    "name": "data_nascimento",
+                    "type": "date",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 2879791450,
+                    "name": "cref",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": false,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 5938713678,
+                    "name": "foto",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": false,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 1873988499,
+                    "name": "id_cidade",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 2067658275,
+                    "name": "id_usuario",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                }
+            ],
+            "constraints": [
+                {
+                    "id": 4705143079,
+                    "type": 0,
+                    "relationships": [
+                        {
+                            "id": 3805834412,
+                            "own_column_id": 2067658275,
+                            "target_column_id": 1905473290
+                        }
+                    ],
+                    "target_table_id": 1324743907
+                },
+                {
+                    "id": 2995505472,
+                    "type": 0,
+                    "target_table_id": "8376306265",
+                    "relationships": [
+                        {
+                            "id": 5987898222,
+                            "own_column_id": "1873988499",
+                            "target_column_id": "9124930246"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 8611770443,
+            "name": "aluno",
+            "position": {
+                "x": 566.4670513105171,
+                "y": 242.82216418710328
+            },
+            "columns": [
+                {
+                    "id": 2192588009,
+                    "name": "id",
+                    "type": "int",
+                    "is_auto_increment": true,
+                    "is_primary_key": true,
+                    "is_not_null": false,
+                    "is_unique": false
+                },
+                {
+                    "id": 3559369890,
+                    "name": "nome",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 6750645949,
+                    "name": "id_usuario",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 5039522463,
+                    "name": "id_professor",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 5174475019,
+                    "name": "data_nascimento",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 8375667554,
+                    "name": "altura",
+                    "type": "float",
+                    "is_primary_key": false,
+                    "is_not_null": false,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 3045996848,
+                    "name": "peso",
+                    "type": "float",
+                    "is_primary_key": false,
+                    "is_not_null": false,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 5653227051,
+                    "name": "foto",
+                    "type": "varchar",
+                    "is_primary_key": false,
+                    "is_not_null": false,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 1948030974,
+                    "name": "id_usuario",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                },
+                {
+                    "id": 6867291129,
+                    "name": "id_cidade",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                }
+            ],
+            "constraints": [
+                {
+                    "id": 5506369684,
+                    "type": 0,
+                    "relationships": [
+                        {
+                            "id": 8841340396,
+                            "own_column_id": 6867291129,
+                            "target_column_id": 9124930246
+                        }
+                    ],
+                    "target_table_id": 8376306265
+                },
+                {
+                    "id": 7887124678,
+                    "type": 0,
+                    "target_table_id": "1324743907",
+                    "relationships": [
+                        {
+                            "id": 4099938485,
+                            "own_column_id": "1948030974",
+                            "target_column_id": "1905473290"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4104555537,
+            "name": "grupo_usuario",
+            "position": {
+                "x": -558.9643790790625,
+                "y": -106.78360714771961
+            },
+            "columns": [
+                {
+                    "id": 642437002,
+                    "is_auto_increment": true,
+                    "is_not_null": false,
+                    "is_primary_key": true,
+                    "is_unique": false,
+                    "name": "id",
+                    "type": "int"
+                },
+                {
+                    "id": 600016737,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "descricao",
+                    "type": "varchar"
+                }
+            ],
+            "constraints": []
+        },
+        {
+            "id": 686866920,
+            "name": "categoria_permissao",
+            "position": {
+                "x": -1510.08325195312,
+                "y": 265.317321777344
+            },
+            "columns": [
+                {
+                    "id": 1270908149,
+                    "is_auto_increment": true,
+                    "is_not_null": false,
+                    "is_primary_key": true,
+                    "is_unique": false,
+                    "name": "id",
+                    "type": "int"
+                },
+                {
+                    "id": 1380624540,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "descricao",
+                    "type": "varchar"
+                },
+                {
+                    "id": 1916813467,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "ordem",
+                    "type": "int"
+                }
+            ],
+            "constraints": []
+        },
+        {
+            "id": 3626378286,
+            "name": "permissao",
+            "position": {
+                "x": -1304.1491175674196,
+                "y": -146.30114837461852
+            },
+            "columns": [
+                {
+                    "id": 1782915856,
+                    "is_auto_increment": true,
+                    "is_not_null": false,
+                    "is_primary_key": true,
+                    "is_unique": false,
+                    "name": "id",
+                    "type": "int"
+                },
+                {
+                    "id": 891962688,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "descricao",
+                    "type": "varchar"
+                },
+                {
+                    "id": 761083031,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "codigo",
+                    "type": "varchar"
+                },
+                {
+                    "id": 391857050,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "id_categoria_permissao",
+                    "type": "int"
+                }
+            ],
+            "constraints": [
+                {
+                    "center_point": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "id": 3277510839,
+                    "relationships": [
+                        {
+                            "own_column_id": 391857050,
+                            "target_column_id": 1270908149,
+                            "id": 8345926298
+                        }
+                    ],
+                    "target_table_id": 686866920,
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "id": 1348810161,
+            "name": "grupo_usuario_permissao",
+            "position": {
+                "x": -967.4973177156674,
+                "y": 23.34944692756065
+            },
+            "columns": [
+                {
+                    "id": 535927279,
+                    "is_auto_increment": true,
+                    "is_not_null": false,
+                    "is_primary_key": true,
+                    "is_unique": false,
+                    "name": "id",
+                    "type": "int"
+                },
+                {
+                    "id": 1250989492,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "id_grupo_usuario",
+                    "type": "int"
+                },
+                {
+                    "id": 942694586,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "id_permissao",
+                    "type": "int"
+                }
+            ],
+            "constraints": [
+                {
+                    "center_point": {
+                        "x": -668.684448242188,
+                        "y": 210.265869140625
+                    },
+                    "id": 3062790312,
+                    "relationships": [
+                        {
+                            "own_column_id": 1250989492,
+                            "target_column_id": 642437002,
+                            "id": 3167066696
+                        }
+                    ],
+                    "target_table_id": 4104555537,
+                    "type": 0
+                },
+                {
+                    "center_point": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "id": 3166623126,
+                    "relationships": [
+                        {
+                            "own_column_id": 942694586,
+                            "target_column_id": 1782915856,
+                            "id": 4293008830
+                        }
+                    ],
+                    "target_table_id": 3626378286,
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "id": 1324743907,
+            "name": "usuario",
+            "position": {
+                "x": -804.6708979951895,
+                "y": 494.19312048627756
+            },
+            "columns": [
+                {
+                    "id": 1905473290,
+                    "is_auto_increment": true,
+                    "is_not_null": false,
+                    "is_primary_key": true,
+                    "is_unique": false,
+                    "name": "id",
+                    "type": "int"
+                },
+                {
+                    "id": 850743278,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "nome",
+                    "type": "varchar"
+                },
+                {
+                    "id": 1994210575,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "email",
+                    "type": "varchar"
+                },
+                {
+                    "id": 1960621910,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "senha",
+                    "type": "varchar"
+                },
+                {
+                    "id": 1449352601,
+                    "is_auto_increment": false,
+                    "is_not_null": true,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "otp_habilitado",
+                    "type": "bool"
+                },
+                {
+                    "id": 594106162,
+                    "is_auto_increment": false,
+                    "is_not_null": false,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "otp_secret",
+                    "type": "varchar"
+                },
+                {
+                    "id": 1904617998,
+                    "is_auto_increment": false,
+                    "is_not_null": false,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "otp_tipo",
+                    "type": "int"
+                },
+                {
+                    "id": 583268699,
+                    "is_auto_increment": false,
+                    "is_not_null": false,
+                    "is_primary_key": false,
+                    "is_unique": false,
+                    "name": "otp_login_code",
+                    "type": "varchar"
+                },
+                {
+                    "id": 1891332707,
+                    "name": "id_grupo_usuario",
+                    "type": "int",
+                    "is_primary_key": false,
+                    "is_not_null": true,
+                    "is_unique": false,
+                    "is_auto_increment": false
+                }
+            ],
+            "constraints": [
+                {
+                    "id": 7588003905,
+                    "type": 0,
+                    "relationships": [
+                        {
+                            "id": 1883180329,
+                            "own_column_id": 1891332707,
+                            "target_column_id": 642437002
+                        }
+                    ],
+                    "target_table_id": 4104555537
+                }
+            ]
+        }
+    ],
+    "version": 1
+}

@@ -1,0 +1,20 @@
+{
+	"dashboard": "Dashboard",
+	"home": "Home",
+	"administrativo": "Administrativo",
+	"lista-usuarios": "Usuários",
+	"lista-grupos-usuario": "Grupos de usuário",
+	"lista-categorias-produto": "Categorias de produto",
+	"lista-tipos-ocorrencia": "Tipos de ocorrência",
+	"lista-tipos-documento": "Tipos de documento",
+	"lista-motoristas": "Motoristas",
+	"lista-produto": "Produtos",
+	"lista-modelos-veiculo": "Modelos de veículo",
+    "lista-empresas": "Empresas",
+	"lista-veiculos": "Veículos",
+	"lista-cargas": "Cargas",
+	"lista-cadastro-dinamico": "Cadastro dinâmico",
+	"lista-tabela-frete": "Tabela de frete",
+	"nao": "Não",
+	"sim": "Sim"
+}

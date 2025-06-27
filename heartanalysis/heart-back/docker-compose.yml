@@ -1,0 +1,47 @@
+services:
+    api:
+        image: apibase
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 120s
+        build: .
+        depends_on:
+            - redis
+        links:
+            - redis
+        restart: "always"
+        command: bash -c "pm2-runtime start ecosystem.config.js"
+        tty: true
+        ports:
+            - "${API_PORT:-8080}:8080"
+        logging:
+            options:
+                max-size: "512m"
+                max-file: "10"
+        volumes:
+            - ./:/usr/src/app
+            - api-heart-back-node-modules:/usr/src/app/node_modules
+        environment:
+            - REDIS_URL=redis://cache
+
+    redis:
+        image: redis
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.21"
+                    memory: 256M
+                reservations:
+                    cpus: "0.10"
+                    memory: 160M
+        restart: "always"
+        logging:
+            options:
+                max-size: "512m"
+                max-file: "10"
+
+volumes:
+    api-heart-back-node-modules:
